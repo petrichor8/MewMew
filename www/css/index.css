@@ -34,7 +34,7 @@ body {
 
 /* Portrait layout (default) */
 .app {
-    background:url('../img/66ceff.gif') no-repeat center center; /* 170px x 200px */
+    /*background:url('../img/66ceff.gif') no-repeat center center; */
     width:133px;
     height:109px;
     position: absolute;
