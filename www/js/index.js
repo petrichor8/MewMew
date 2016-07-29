@@ -48,7 +48,7 @@ var app = {
     // initialize media
     ,initMedia: function(){
         var src = "img/clip.mp3"; 
-        src = app.getPhoneGapPath() + src;
+        //src = app.getPhoneGapPath() + src;
         app.logger('media src: ' + src);
         media = new Media(src,app.onMediaSuccess,app.onMediaError,app.onMediaStatus);
     }
