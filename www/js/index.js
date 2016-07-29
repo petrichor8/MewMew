@@ -61,8 +61,9 @@ var app = {
     ,getPhoneGapPath: function() {
         var path = '';
         if(device.platform == "Android"){
-            path = window.location.pathname;
-            path = path.substr( path, path.length - 10 );
+            path = window.location.pathname; 
+            var sizefilename = path.length - (path.lastIndexOf("/")+1); 
+            path = path.substr( path, path.length - sizefilename );
         }
         return path;
     }
