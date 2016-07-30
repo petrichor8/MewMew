@@ -54,8 +54,14 @@ var app = {
     }
     // play media 
     ,playSound: function(){
+            app.stopSound();
             app.logger('playSound called');
             media.play();
+    }
+    // stop media 
+    ,stopSound: function(){
+            app.logger('stopSound called');
+            media.stop();
     }
     // get path to file
     ,getPhoneGapPath: function() {
