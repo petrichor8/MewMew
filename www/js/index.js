@@ -18,6 +18,7 @@
  */
 var media = 0;
 var logEvents = true;
+var playing=false;
 var app = {
     // Application Constructor
     initialize: function() {
@@ -54,14 +55,16 @@ var app = {
     }
     // play media 
     ,playSound: function(){
-            app.stopSound();
-            app.logger('playSound called');
-            media.play();
+        if(playing){app.stopSound();}
+        app.logger('playSound called');
+        playing=true;
+        media.play();
     }
     // stop media 
     ,stopSound: function(){
-            app.logger('stopSound called');
-            media.stop();
+        app.logger('stopSound called');
+        media.stop();
+        playing=false;
     }
     // get path to file
     ,getPhoneGapPath: function() {
@@ -90,6 +93,7 @@ var app = {
     ,onMediaError: function(error) {
         app.logger("onMediaError called");
         app.logger(error);
+        playing=false;
         alert('code: '    + error.code    + '\n' + 'message: ' + error.message + '\n\nmedia src: ' + media.src + '\n\nwindow pathname: ' + window.location.pathname);
     }
 
@@ -98,6 +102,4 @@ var app = {
         app.logger("onMediaStatus called");
         app.logger('code: ' + code);
     }
-
-
 };
