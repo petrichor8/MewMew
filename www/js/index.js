@@ -94,7 +94,7 @@ var app = {
         app.logger("onMediaError called");
         app.logger(error);
         playing=false;
-        alert('code: '    + error.code    + '\n' + 'message: ' + error.message + '\n\nmedia src: ' + media.src + '\n\nwindow pathname: ' + window.location.pathname);
+        //alert('code: '    + error.code    + '\n' + 'message: ' + error.message + '\n\nmedia src: ' + media.src + '\n\nwindow pathname: ' + window.location.pathname);
     }
 
     // media onStatus Callback
